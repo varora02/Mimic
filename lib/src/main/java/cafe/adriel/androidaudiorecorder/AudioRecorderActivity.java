@@ -61,6 +61,8 @@ public class AudioRecorderActivity extends AppCompatActivity
     private ImageButton recordView;
     private ImageButton playView;
 
+    public static String textName = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -174,8 +176,9 @@ public class AudioRecorderActivity extends AppCompatActivity
         try
         {
             // WavFile wavFile = WavFile.openWavFile(f);
-            Log.d("sfd" ,   MyReader.mostLike(f));
-            Toast.makeText(this, "yo", Toast.LENGTH_LONG).show();
+            textName = MyReader.mostLike(f);
+            Log.d("sfd" , textName);
+            //Toast.makeText(this, "yo", Toast.LENGTH_LONG).show();
         }
         catch(Exception e)
         {
